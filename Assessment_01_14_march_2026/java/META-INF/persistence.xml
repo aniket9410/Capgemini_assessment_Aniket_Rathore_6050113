@@ -1,0 +1,26 @@
+
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+version="3.0">
+
+<persistence-unit name="JPAHibernate">
+
+<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+<class>cg.demo.association.test1.Customer</class>
+<class>cg.demo.association.test1.Order</class>
+
+<properties>
+
+<property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+<property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/testdb"/>
+<property name="jakarta.persistence.jdbc.user" value="postgres"/>
+<property name="jakarta.persistence.jdbc.password" value="mrirav"/>
+
+<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+<property name="hibernate.hbm2ddl.auto" value="update"/>
+<property name="hibernate.show_sql" value="true"/>
+
+</properties>
+
+</persistence-unit>
+</persistence>
